@@ -1,0 +1,5 @@
+[
+  { "id": "1", "title": "The Hobbit", "authorId": "1", "categoryId": "1" },
+  { "id": "2", "title": "1984", "authorId": "2", "categoryId": "2" },
+  { "id": "3", "title": "The Silmarillion", "authorId": "1", "categoryId": "1" }
+]
