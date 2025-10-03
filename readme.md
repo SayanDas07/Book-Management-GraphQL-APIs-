@@ -32,8 +32,8 @@ Follow these steps to get the project up and running:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd graphql-book-library
+git clone https://github.com/SayanDas07/Book-Management-GraphQL-APIs.git
+cd Book-Management-GraphQL-APIs
 ```
 
 ### 2️⃣ Setup Backend (Server)
@@ -49,8 +49,9 @@ npm install
 cd data
 ```
 
-Create three JSON files in the `data` folder:
+Modify three JSON files in the `data` folder as per your data:
 
+**Like this->**
 **books.json**
 ```json
 [
@@ -84,9 +85,6 @@ Create three JSON files in the `data` folder:
 ```
 
 ```bash
-# Go back to server root
-cd ..
-
 # Start the server
 npm run start
 ```
@@ -108,7 +106,7 @@ npm install
 npm run dev
 ```
 
-Your React app will be running at `http://localhost:3000` (or the port shown in terminal) 🎨
+Your Nextjs app will be running at `http://localhost:3000` (or the port shown in terminal) 🎨
 
 ---
 
@@ -137,6 +135,9 @@ Your React app will be running at `http://localhost:3000` (or the port shown in 
 GET /books/1           // Get book
 GET /authors/5         // Get author details
 GET /categories/2      // Get category details
+
+// REST: Gives all data of that controller
+GET /books          // in rest api this API will return all data of all books but if use GraphQL API then we can extract those fields which we need. For that the response time will be faster.
 ```
 
 **Solution with GraphQL:**
@@ -153,6 +154,11 @@ query {
     }
   }
 }
+
+
+getBook() {
+    title
+} -> This give only title of all books not all data of books
 ```
 
 ### 🎯 Benefits
